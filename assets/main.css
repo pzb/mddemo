@@ -1,0 +1,495 @@
+/*
+Copyright (c) HTML5 Boilerplate
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/* Portions Copyright (c) 2015, Amazon Technologies, Inc. */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* This section copyright Amazon.com, Inc. or its affiliates. */
+
+@page PageLayout {
+  margin-left: 1in;
+  margin-right: 1in;
+}
+
+@page {
+  size: letter portrait; 
+  margin-left: 1in;
+  margin-right: 1in;
+}
+
+@page :left { 
+    font-family: "Segoe UI", sans-serif;
+    font-size: 8pt;
+}
+@page :right { 
+    font-family: "Segoe UI", sans-serif;
+    font-size: 8pt;
+}
+
+
+// Segoe UI Regular
+@font-face {
+  font-family: "Segoe UI";
+  src: url("segoeui.ttf");
+  font-weight: normal; // Regular (400)
+  font-style: normal;
+}
+
+// Segoe UI Italic
+@font-face {
+  font-family: "Segoe UI";
+  src: url("segoeuii.ttf");
+  font-weight: normal; // Regular (400) 
+  font-style: italic;
+}
+
+
+// Segoe UI Semilight
+@font-face {
+  font-family: "Segoe UI";
+  src: url("SEGOEUISL.TTF");
+  font-weight: 300; // Semilight
+  font-style: normal;
+}
+
+// Segoe UI Light
+@font-face {
+  font-family: "Segoe UI";
+  src: url("segoeuil.ttf");
+  font-weight: 200; // Light
+  font-style: normal;
+}
+
+// Segoe UI Semibold
+@font-face {
+  font-family: "Segoe UI";
+  src: url("seguisb.ttf");
+  font-weight: 600; // Semibold
+  font-style: normal;
+}
+
+
+// Segoe UI Bold
+@font-face {
+  font-family: "Segoe UI";
+  src: url("segoeuib.ttf");
+  font-weight: bold; // (700)
+  font-style: normal;
+}
+
+// Segoe UI Bold Italic
+@font-face {
+  font-family: "Segoe UI";
+  src: url("segoeuiz.ttf");
+  font-weight: bold; // (700)
+  font-style: italic;
+}
+
+
+
+
+/* Override WeasyPrint's default "monospace" */
+/*
+code { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+kbd { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+listing { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+plaintext { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+pre { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+samp { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+tt { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+xmp { font-family: "Anonymous Pro Minus", monospace; font-size: 9pt;}
+*/
+
+html {
+}
+
+body {
+  size: letter portrait;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 10pt;
+  line-height: 1.4;
+  color: #2a2a2a;
+}
+
+div.WordPageLayout {
+page: PageLayout;
+}
+
+p {
+  margin-top: 5.5pt;
+}
+
+h1 {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 200;
+    font-size: 28pt;
+    color: #707070;
+}
+
+h2 {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: normal;
+    font-size: 16pt;
+}
+
+h3 {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: normal;
+    font-size: 14pt;
+}
+
+
+td {
+  border-style: solid;
+  border-width: 1px;
+  padding: 3pt;
+}
+
+
+ol  ol {
+	list-style: lower-alpha;
+}
+
+ol  ol  ol {
+	list-style: lower-roman;
+}
+
+
+blockquote.note {
+	overflow: auto;
+	padding: 0;
+	position: relative;
+	margin: 0 0 1rem 0;
+	border: 1px solid #bbb;
+	padding-top: 30px;
+	padding-left: 1em;
+	box-sizing: border-box;
+}
+
+blockquote.note:before {
+	content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACwElEQVQ4T43TW0gUURzH8e+MM+uuOrqmG+uahZFrSlhWdiGjiKIr1EtFgfXSQz1EEBFRPURFFEVQT0EFQTeph/ShyCjsClGpaW0FXaDL2q63ddfVdWd358TMahcI6sA8HGb+n/mdHzMSwJZa1+HCXHV7xXg119z/a3V80gfCQ8nT5x5375fMh/euLh2qKY453Hn/Gk3f74vC/Y+25PFbX1QL2LG42HDSI8mS+D8BCCYKWLt5qcMCDm6oSAS7owomIEaRv2ESSOaITGG+QyxcPjfLAtqvbIhUrpytKWo3GL0gokByJI1sDSDZQMoF2QUZHtqvNaVCCXvOL2BFtaaogREgBhiAAtLolQlSHsgFIJvAzT8BtSigJeJD/92B6CtJheI5vyVYOV9TMsNghEHoI1CGFX84obD/UhVfumTKS+DQpiTt1xt/T7AxUrlqiabYBsCIgIgDKQu5cK+E260uZnrHULdsJs2tn7jx6ANznG9FtfPjaIkbI8rYgJbUBxGGsI4v2STufV7As+81nNy2iGBUR8t20P41TCiqc6e5DUOII+kS62tSkizMulHtSdRMnWifg/OBXUxwu5kz1Ut2tp2qcU6afEGa3gShq5OecPyhBbRcnCGmL20Ba5devifVHGjdS7V3LK7iIsJ6ip2LvTS87KSxzU/eUIjuUCyQTnC1NqEVBpTSaR9+Au+eVnDKt4f8AjcZLg+d/cOcrZvO9RffaOrwow320juQvGsBr67VNctKzzy7vV8tLTOsj83XJnhurOGWr4xZsyvxevJYVVVkveBoQwevO96TMNIdmGc3Xl5Zf0yIrt32rBieEoPOb3Ymz1/IxUduGlpcTCsrxJmThYTg2Rs/W8c1pvx9Mc0E3EC5KU+ZmJ9zZt/cE1pWuFyIYh2Unz/EZf8iW288W3LbI2Kd54GeSBn9NXX1k34Af4cfLGGJsvcAAAAASUVORK5CYII=") " Note";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100% !important;
+	background: #ededed;
+	font-weight: bold;
+	padding: 5px 0;
+	text-indent: 15px;
+	box-sizing: border-box;
+}
+
+blockquote.note:after {
+	box-sizing: border-box;
+}
+
+th {
+	border: 1px solid black;
+	background: #ededed;
+	padding-left: 0.2em; 
+	padding-right: 0.2em;
+	padding-bottom: 1px;
+}
+
+a {
+		text-decoration: none;
+		color: #00749e;
+}
+
+a:visited {
+		color: #03697a;
+
+}
+
+a:hover {
+		color: #06d;
+}
+
+/* Lots of hacks to avoid underlining every abbr in print */
+@media print {
+	abbr[title] { text-decoration: none; border-bottom: none;}
+	:link abbr[title] { text-decoration: underline; }
+	del abbr[title] { text-decoration: line-through; }
+	ins abbr[title] { text-decoration: underline; }
+	.reversefootnote { display: none; }
+}
+
+@media screen {
+	body {
+		margin-left : 1in;
+		margin-right: 1in;
+	}
+}
+
+/* Highlight changes */
+del { background-color: #f08080; }
+ins { background-color: #90ee90; }
+
+/* End */ 
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
