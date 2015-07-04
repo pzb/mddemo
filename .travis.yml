@@ -1,11 +1,21 @@
 sudo: true
 language: ruby
 rvm:
-    - 2.2.2
+- 2.2.2
 before_install:
-    - sudo apt-get update -qq
-    - sudo apt-get install python-dev python-pip python-lxml libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
-    - sudo pip install WeasyPrint
-script: 
-    - utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
-    - weasyprint program_requirements.html program_requirements.pdf
+- sudo apt-get update -qq
+- sudo apt-get install python-dev python-pip python-lxml libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
+  libffi-dev shared-mime-info
+- sudo pip install WeasyPrint
+script:
+- utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
+- weasyprint program_requirements.html program_requirements.pdf
+deploy:
+  provider: s3
+  access_key_id: AKIAIT2SI3V32IUPTFYA
+  secret_access_key:
+    secure: Ovma3GdtKx38p6J+SaCDTbw/TwB6HJpHKG8gSaLc2VKOJIEr53Nab5uG0RcH+XjngNQ8qTvHFPrcjHLyd6IY/cFHytI2kB5q+MWGMGkBdBDtlF6y+5lcNzQaKYfnthluXAdsAkI/YIhrVMmLyxEfopgHn6Uf8CrNZJnsjAUd87bG4h3jj5aIh0/BbS6ZcbX7DFzds/ReY6NL5WrdR4ODOhJp4TJtS7zkzTraxio2UrEEGRXbnkGS4w519D5dNDcR5CDiw17Y+Aq/a1VOXYbdA0Y2e6pYES0DtHNrZbh1anTqZ2WZZ08W58O4NzdH+GGR7D/p4W9l13gbE0FT7Xn9xbUu4+vorpUDO4kBBdKy1mS6TkzN17gplOBGIwEqhCfoG8jVbnYbXFJwSffeOeqCAfCcUP7Ggm73/MLSk3URQNMiTWm5+f3dRpvuJP+QalUvdhNFBJFM5lLifwdYXn1IB2erFYip6EdbT/sX6I8+dObIlw6aXZLOw/GWVwwzNsSXNuaFBz5nK9ryLjJet2Nq43M6U3k8UmlQSoYEL6nmVWT9YQ+p2XEHn31XIKqmtz6Wiz6AoV0A1wt+f9YMBK1IuoAkwBDaV7KOsKQP5BkukXfxdC99eLkkn4noDWRPoAs99bliznVH2hTK9+uBWPGCdAh7fwRFTeTLeud0Kpg9YkY=
+  bucket: pzb-mddemo
+  acl: public_read
+  on:
+    repo: pzb/mddemo
