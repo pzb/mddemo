@@ -1,4 +1,11 @@
+sudo:true
 language: ruby
 rvm:
     - 2.2.2
-script: utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install python-dev python-pip python-lxml libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+    - sudo pip install WeasyPrint
+script: 
+    - utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
+    - weasyprint program_requirements.html program_requirements.pdf
