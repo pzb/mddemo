@@ -1,0 +1,4 @@
+language: ruby
+rvm:
+    - 2.2.2
+script: utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
