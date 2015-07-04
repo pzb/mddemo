@@ -8,6 +8,8 @@ before_install:
   libffi-dev shared-mime-info
 - sudo pip install WeasyPrint
 script:
+- mkdir -p ~/.fonts
+- cp -av assets/*.ttf assets/*.TTF ~/.fonts/
 - utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
 - weasyprint program_requirements.html program_requirements.pdf
 - mkdir -p deploy
