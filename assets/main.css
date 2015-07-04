@@ -128,61 +128,61 @@ textarea {
 }
 
 
-// Segoe UI Regular
+/* Segoe UI Regular */
 @font-face {
   font-family: "Segoe UI";
   src: url("segoeui.ttf");
-  font-weight: normal; // Regular (400)
+  font-weight: normal; /* Regular (400) */
   font-style: normal;
 }
 
-// Segoe UI Italic
+/* Segoe UI Italic */
 @font-face {
   font-family: "Segoe UI";
   src: url("segoeuii.ttf");
-  font-weight: normal; // Regular (400) 
+  font-weight: normal; /* Regular (400) */
   font-style: italic;
 }
 
 
-// Segoe UI Semilight
+/* Segoe UI Semilight */
 @font-face {
   font-family: "Segoe UI";
   src: url("SEGOEUISL.TTF");
-  font-weight: 300; // Semilight
+  font-weight: 300; /* Semilight */
   font-style: normal;
 }
 
-// Segoe UI Light
+/* Segoe UI Light */
 @font-face {
   font-family: "Segoe UI";
   src: url("segoeuil.ttf");
-  font-weight: 200; // Light
+  font-weight: 200; /* Light */
   font-style: normal;
 }
 
-// Segoe UI Semibold
+/* Segoe UI Semibold */
 @font-face {
   font-family: "Segoe UI";
   src: url("seguisb.ttf");
-  font-weight: 600; // Semibold
+  font-weight: 600; /* Semibold */
   font-style: normal;
 }
 
 
-// Segoe UI Bold
+/* Segoe UI Bold */
 @font-face {
   font-family: "Segoe UI";
   src: url("segoeuib.ttf");
-  font-weight: bold; // (700)
+  font-weight: bold; /* (700) */
   font-style: normal;
 }
 
-// Segoe UI Bold Italic
+/* Segoe UI Bold Italic */
 @font-face {
   font-family: "Segoe UI";
   src: url("segoeuiz.ttf");
-  font-weight: bold; // (700)
+  font-weight: bold; /* (700) */
   font-style: italic;
 }
 
@@ -431,8 +431,8 @@ ins { background-color: #90ee90; }
     *,
     *:before,
     *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+/*        background: transparent !important; */
+/*        color: #000 !important; */ /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
@@ -444,7 +444,7 @@ ins { background-color: #90ee90; }
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+/*        content: " (" attr(href) ")"; */
     }
 
     /*
