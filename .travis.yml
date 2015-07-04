@@ -10,6 +10,8 @@ before_install:
 script:
 - utils/kram.rb -t templates/main.html -o program_requirements.html docs/program_requirements.md
 - weasyprint program_requirements.html program_requirements.pdf
+- mkdir -p deploy
+- cp -av assets *.html *.pdf deploy/
 deploy:
   provider: s3
   access_key_id: AKIAIT2SI3V32IUPTFYA
@@ -20,5 +22,6 @@ deploy:
   endpoint: s3-us-west-2.amazonaws.com
   skip_cleanup: true
   acl: public_read
+  local_dir: deploy
   on:
     repo: pzb/mddemo
